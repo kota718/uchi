@@ -1,0 +1,69 @@
+# Default application configuration that all configurations inherit from.
+#
+# This is an opinionated list of which hooks are valuable to run and what their
+# out of the box settings should be.
+
+# Whether to ignore frontmatter at the beginning of Slim documents for
+# frameworks such as Jekyll/Middleman
+skip_frontmatter: false
+
+linters:
+  CommentControlStatement:
+    enabled: true
+
+  ConsecutiveControlStatements:
+    enabled: true
+    max_consecutive: 2
+
+  EmptyControlStatement:
+    enabled: true
+
+  RedundantDiv:
+    enabled: true
+
+  LineLength:
+    enabled: true
+    max: 12t 0
+
+  RuboCop:
+    enabled: true
+    # These cops are incredibly noisy since the Ruby we extract from Slim
+    # templates isn't well-formatted, so we ignore them.
+    # WARNING: If you define this list in your own .slim-lint.yml file, you'll
+    # be overriding the list defined here.
+    ignored_cops:
+      - Lint/BlockAlignment
+      - Lint/EndAlignment
+      - Lint/Void
+      - Metrics/BlockLength
+      - Metrics/LineLength
+      - Style/AlignHash
+      - Style/AlignParameters
+      - Style/BlockNesting
+      - Style/Encoding
+      - Style/FileName
+      - Style/FirstParameterIndentation
+      - Style/FrozenStringLiteralComment
+      - Style/IfUnlessModifier
+      - Style/IndentationConsistency
+      - Style/IndentationWidth
+      - Style/MultilineArrayBraceLayout
+      - Style/MultilineAssignmentLayout
+      - Style/MultilineHashBraceLayout
+      - Style/MultilineMethodCallBraceLayout
+      - Style/MultilineMethodDefinitionBraceLayout
+      - Style/MultilineMethodCallIndentation
+      - Style/MultilineOperationIndentation
+      - Style/Next
+      - Style/TrailingBlankLines
+      - Style/TrailingWhitespace
+      - Style/WhileUntilModifier
+
+  Tab:
+    enabled: true
+
+  TagCase:
+    enabled: true
+
+  TrailingWhitespace:
+    enabled: true

@@ -70,6 +70,7 @@ group :development do
 
   gem 'rubocop', '~> 0.48.1', require: false
   gem 'rubocop-rspec', '~> 1.15', require: false
+  gem 'slim_lint', '~> 0.12.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
