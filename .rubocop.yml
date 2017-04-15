@@ -1,0 +1,52 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'db/schema.rb'
+  TargetRubyVersion: 2.4
+
+Rails:
+  Enabled: true
+
+Style/Encoding:
+  EnforcedStyle: always
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Exclude:
+    - "db/migrate/*.rb"
+
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+
+#Style/Lambda:
+#  EnforcedStyle: literal
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - "db/migrate/*.rb"
+    - "db/seeds.rb"
+    - "config/initializers/devise.rb"
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*.rb"

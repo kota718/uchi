@@ -1,3 +1,6 @@
-I18n.available_locales = [:ja, :en]
+# encoding: utf-8
+# frozen_string_literal: true
+
+I18n.available_locales = %i[ja en]
 I18n.load_path += Dir[Rails.root.join('lib', 'locale', '**', '*.{rb,yml}')]
 I18n.default_locale = :ja
