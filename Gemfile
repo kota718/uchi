@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 gem 'devise', '4.2.1'
+gem 'devise-i18n', '~> 1.1', '>= 1.1.2'
 gem 'http_accept_language', '~> 2.1'
 
 # Use Capistrano for deployment

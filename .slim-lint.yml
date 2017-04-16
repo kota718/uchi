@@ -23,7 +23,7 @@ linters:
 
   LineLength:
     enabled: true
-    max: 12t 0
+    max: 120
 
   RuboCop:
     enabled: true
